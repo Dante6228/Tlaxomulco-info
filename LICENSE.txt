@@ -1,0 +1,7 @@
+PROPIEDAD EXCLUSIVA - USO RESTRINGIDO  
+Este software y su código fuente son propiedad de Dante Alejandro Viveros Rodríguez.  
+Queda prohibido:  
+- Copiar, modificar o distribuir el código.  
+- Usarlo en proyectos comerciales o personales.  
+- Compartirlo con terceros sin autorización por escrito.  
+Infringir estos términos dará lugar a acciones legales.  
