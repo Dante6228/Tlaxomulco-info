@@ -2,510 +2,641 @@
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="src/output.css">
-    <meta name="description" content="Educación integral desde preescolar hasta preparatoria. Instituto Tlaxomulco, formando el futuro.">
-    <meta name="keywords" content="escuela, kinder, primaria, secundaria, preparatoria, educación, Tlaxomulco">
+    <!-- Metadatos básicos -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Preconexiones para mejorar performance -->
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com">
+
+    <!-- Metadatos SEO -->
+    <title>Instituto Tlaxomulco | Educación Integral Kinder a Preparatoria</title>
+    <meta name="description"
+        content="Más de 50 años formando líderes con valores. Educación integral desde preescolar hasta preparatoria en Tlaxomulco. Excelencia académica y formación humana.">
+    <meta name="keywords"
+        content="colegio Tlaxomulco, escuela privada, educación básica, preparatoria, kinder, primaria, secundaria, formación integral, instituto educativo">
     <meta name="author" content="Instituto Tlaxomulco">
-    <meta property="og:title" content="Instituto Tlaxomulco" />
-    <meta property="og:description" content="Educación integral desde preescolar hasta preparatoria." />
-    <meta property="og:image" content="https://tusitio.com/logo.jpg" />
-    <meta property="og:url" content="https://tusitio.com/" />
-    <meta name="twitter:card" content="summary_large_image" />
-    <title>Instituto Tlaxomulco</title>
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#4f46e5"> <!-- Color del tema para móviles -->
+
+    <!-- Open Graph / Redes Sociales -->
+    <meta property="og:title" content="Instituto Tlaxomulco | Educación con Valores">
+    <meta property="og:description"
+        content="Más de 50 años formando líderes con valores. Educación integral desde preescolar hasta preparatoria.">
+    <meta property="og:image" content="https://institutotlaxomulco.edu.mx/assets/og-image.jpg">
+    <meta property="og:url" content="https://institutotlaxomulco.edu.mx/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Instituto Tlaxomulco">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Instituto Tlaxomulco | Educación con Valores">
+    <meta name="twitter:description"
+        content="Más de 50 años formando líderes con valores. Educación integral desde preescolar hasta preparatoria.">
+    <meta name="twitter:image" content="https://institutotlaxomulco.edu.mx/assets/twitter-card.jpg">
+    <meta name="twitter:site" content="@TlaxomulcoEdu">
+
+    <!-- Favicon y iconos -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Preload de recursos críticos -->
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="https://unpkg.com/aos@next/dist/aos.css" as="style"
+        onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="/src/output.css" as="style">
+
+    <!-- Hojas de estilo -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <link rel="stylesheet" href="src/output.css">
+
+    <!-- Estilos críticos inline -->
     <style>
         html {
             scroll-behavior: smooth;
+            scroll-padding-top: 6rem;
+            /* Para evitar que el header cubra el contenido al hacer scroll */
+        }
+
+        /* Optimización de fuentes */
+        body {
+            font-display: swap;
+        }
+
+        /* Transiciones suaves */
+        a,
+        button {
+            transition: all 0.3s ease;
         }
     </style>
-</head>
 
-    <!-- NAVBAR MEJORADA -->
-    <header class="bg-white shadow-md sticky top-0 z-50">
-        <div class="container mx-auto px-4">
-            <div class="flex justify-between items-center h-20">
-                <!-- Logo y nombre -->
-                <a href="#" class="flex items-center gap-3 group">
-                    <img src="../img/logo.jpg" alt="Logo Instituto Tlaxomulco" class="h-10 w-auto transition-transform duration-300 group-hover:scale-105">
-                    <div>
-                        <h1 class="text-xl font-bold text-indigo-800">Instituto Tlaxomulco</h1>
-                        <p class="text-xs text-gray-500 hidden sm:block">Educación con valores</p>
-                    </div>
-                </a>
-
-                <!-- Navegación desktop -->
-                <nav class="hidden md:flex items-center gap-1">
-                    <a href="#inicio" class="px-4 py-2 text-sm font-medium text-gray-700 hover:text-indigo-600 transition-colors duration-300">
-                        Inicio
-                    </a>
-                    <a href="#nosotros" class="px-4 py-2 text-sm font-medium text-gray-700 hover:text-indigo-600 transition-colors duration-300">
-                        Nosotros
-                    </a>
-                    <a href="#niveles" class="px-4 py-2 text-sm font-medium text-gray-700 hover:text-indigo-600 transition-colors duration-300">
-                        Niveles
-                    </a>
-                    <a href="#instalaciones" class="px-4 py-2 text-sm font-medium text-gray-700 hover:text-indigo-600 transition-colors duration-300">
-                        Instalaciones
-                    </a>
-                    <a href="#contacto" class="ml-2 px-5 py-2 rounded-full text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 transition-colors duration-300 shadow hover:shadow-md">
-                        Contacto
-                    </a>
-                </nav>
-
-                <!-- Botón móvil -->
-                <button class="md:hidden text-gray-700 focus:outline-none" aria-label="Menú">
-                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                    </svg>
-                </button>
-            </div>
-        </div>
-
-        <!-- Menú móvil (oculto por defecto) -->
-        <div class="md:hidden hidden bg-white border-t border-gray-200 px-4 py-3">
-            <div class="flex flex-col space-y-3">
-                <a href="#inicio" class="px-3 py-2 text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-indigo-50 rounded-md transition">
-                    Inicio
-                </a>
-                <a href="#nosotros" class="px-3 py-2 text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-indigo-50 rounded-md transition">
-                    Nosotros
-                </a>
-                <a href="#niveles" class="px-3 py-2 text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-indigo-50 rounded-md transition">
-                    Niveles
-                </a>
-                <a href="#instalaciones" class="px-3 py-2 text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-indigo-50 rounded-md transition">
-                    Instalaciones
-                </a>
-                <a href="#contacto" class="px-3 py-2 text-center text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700 rounded-md transition">
-                    Contacto
-                </a>
-            </div>
-        </div>
-    </header>
-
+    <!-- Scripts de carga diferida -->
+    <script defer src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-        // JavaScript para el menú móvil
-        document.querySelector('button[aria-label="Menú"]').addEventListener('click', function() {
-            const mobileMenu = document.querySelector('.md\\:hidden.hidden');
-            mobileMenu.classList.toggle('hidden');
-            mobileMenu.classList.toggle('block');
+        document.addEventListener('DOMContentLoaded', function () {
+            AOS.init({
+                duration: 600,
+                once: true
+            });
+
+            // Precarga de imágenes importantes
+            const images = ['hero.jpg', 'logo.png'];
+            images.forEach(img => {
+                const image = new Image();
+                image.src = '/assets/' + img;
+            });
         });
     </script>
+</head>
 
-    <!-- HERO MEJORADO Y CORREGIDO -->
-    <section class="relative bg-gradient-to-r from-indigo-800 to-indigo-900 py-28 md:py-36 text-white overflow-hidden" data-aos="fade">
-        
-        <!-- Contenedor principal -->
-        <div class="container mx-auto px-4 text-center relative z-10">
-            <!-- Logo/Título superior (sin blur) -->
-            <div class="flex justify-center mb-8">
-                <div class="bg-white/10 p-3 rounded-full border border-white/20">
-                    <img src="../img/logo.jpg" alt="Logo Instituto Tlaxomulco" class="h-12 w-auto">
+<!-- NAVBAR MEJORADA -->
+<header class="bg-white shadow-md sticky top-0 z-50">
+    <div class="container mx-auto px-4">
+        <div class="flex justify-between items-center h-20">
+            <!-- Logo y nombre -->
+            <a href="#" class="flex items-center gap-3 group">
+                <img src="../img/logo.jpg" alt="Logo Instituto Tlaxomulco"
+                    class="h-10 w-auto transition-transform duration-300 group-hover:scale-105">
+                <div>
+                    <h1 class="text-xl font-bold text-indigo-800">Instituto Tlaxomulco</h1>
+                    <p class="text-xs text-gray-500 hidden sm:block">Educación con valores</p>
                 </div>
+            </a>
+
+            <!-- Navegación desktop -->
+            <nav class="hidden md:flex items-center gap-1">
+                <a href="#inicio"
+                    class="px-4 py-2 text-sm font-medium text-gray-700 hover:text-indigo-600 transition-colors duration-300">
+                    Inicio
+                </a>
+                <a href="#nosotros"
+                    class="px-4 py-2 text-sm font-medium text-gray-700 hover:text-indigo-600 transition-colors duration-300">
+                    Nosotros
+                </a>
+                <a href="#niveles"
+                    class="px-4 py-2 text-sm font-medium text-gray-700 hover:text-indigo-600 transition-colors duration-300">
+                    Niveles
+                </a>
+                <a href="#instalaciones"
+                    class="px-4 py-2 text-sm font-medium text-gray-700 hover:text-indigo-600 transition-colors duration-300">
+                    Instalaciones
+                </a>
+                <a href="#contacto"
+                    class="ml-2 px-5 py-2 rounded-full text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 transition-colors duration-300 shadow hover:shadow-md">
+                    Contacto
+                </a>
+            </nav>
+
+            <!-- Botón móvil -->
+            <button class="md:hidden text-gray-700 focus:outline-none" aria-label="Menú">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16">
+                    </path>
+                </svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- Menú móvil (oculto por defecto) -->
+    <div class="md:hidden hidden bg-white border-t border-gray-200 px-4 py-3">
+        <div class="flex flex-col space-y-3">
+            <a href="#inicio"
+                class="px-3 py-2 text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-indigo-50 rounded-md transition">
+                Inicio
+            </a>
+            <a href="#nosotros"
+                class="px-3 py-2 text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-indigo-50 rounded-md transition">
+                Nosotros
+            </a>
+            <a href="#niveles"
+                class="px-3 py-2 text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-indigo-50 rounded-md transition">
+                Niveles
+            </a>
+            <a href="#instalaciones"
+                class="px-3 py-2 text-base font-medium text-gray-700 hover:text-indigo-600 hover:bg-indigo-50 rounded-md transition">
+                Instalaciones
+            </a>
+            <a href="#contacto"
+                class="px-3 py-2 text-center text-base font-medium text-white bg-indigo-600 hover:bg-indigo-700 rounded-md transition">
+                Contacto
+            </a>
+        </div>
+    </div>
+</header>
+
+<script>
+    // JavaScript para el menú móvil
+    document.querySelector('button[aria-label="Menú"]').addEventListener('click', function () {
+        const mobileMenu = document.querySelector('.md\\:hidden.hidden');
+        mobileMenu.classList.toggle('hidden');
+        mobileMenu.classList.toggle('block');
+    });
+</script>
+
+<!-- HERO MEJORADO Y CORREGIDO -->
+<section class="relative bg-gradient-to-r from-indigo-800 to-indigo-900 py-28 md:py-36 text-white overflow-hidden"
+    data-aos="fade">
+
+    <!-- Contenedor principal -->
+    <div class="container mx-auto px-4 text-center relative z-10">
+        <!-- Logo/Título superior (sin blur) -->
+        <div class="flex justify-center mb-8">
+            <div class="bg-white/10 p-3 rounded-full border border-white/20">
+                <img src="../img/logo.jpg" alt="Logo Instituto Tlaxomulco" class="h-12 w-auto">
             </div>
-            
-            <!-- Texto principal -->
-            <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 max-w-4xl mx-auto">
-                <span class="block text-indigo-200 mb-3 text-xl md:text-2xl font-medium">Más de 50 años educando</span>
-                <span class="bg-gradient-to-r from-white to-indigo-200 bg-clip-text text-transparent">Formando líderes con valores</span>
-            </h1>
-            
-            <!-- Subtítulo -->
-            <p class="text-xl md:text-2xl text-indigo-100 mb-8 max-w-3xl mx-auto">
-                Educación integral desde Kinder hasta Preparatoria con excelencia académica y formación humana
-            </p>
-            
-            <!-- Botones CTA (corregidos) -->
-            <div class="flex flex-col sm:flex-row justify-center gap-4 relative z-20 rounded-md bg-transparent">
-                <a href="#contacto" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-indigo-800 transition duration-300">
-                    Solicitar información
+        </div>
+
+        <!-- Texto principal -->
+        <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6 max-w-4xl mx-auto">
+            <span class="block text-indigo-200 mb-3 text-xl md:text-2xl font-medium">Más de 50 años educando</span>
+            <span class="bg-gradient-to-r from-white to-indigo-200 bg-clip-text text-transparent">Formando líderes con
+                valores</span>
+        </h1>
+
+        <!-- Subtítulo -->
+        <p class="text-xl md:text-2xl text-indigo-100 mb-8 max-w-3xl mx-auto">
+            Educación integral desde Kinder hasta Preparatoria con excelencia académica y formación humana
+        </p>
+
+        <!-- Botones CTA (corregidos) -->
+        <div class="flex flex-col sm:flex-row justify-center gap-4 relative z-20 rounded-md bg-transparent">
+            <a href="#contacto"
+                class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-indigo-800 transition duration-300">
+                Solicitar información
+                <i class="fas fa-arrow-right ml-2"></i>
+            </a>
+            <a href="#niveles"
+                class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-indigo-800 transition duration-300">
+                Conoce nuestros niveles
+            </a>
+        </div>
+
+        <!-- Elemento decorativo inferior (sin blur) -->
+        <div class="absolute bottom-0 left-0 right-0 h-16 bg-white/10"></div>
+    </div>
+
+    <!-- Flecha indicadora -->
+    <a href="#nosotros" class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
+        <i class="fas fa-chevron-down text-2xl"></i>
+    </a>
+</section>
+
+<!-- NOSOTROS -->
+<section id="nosotros" class="py-16 bg-white" data-aos="fade-up">
+    <div class="container mx-auto px-4">
+        <h3 class="text-2xl font-bold text-indigo-800 mb-6">¿Quiénes somos?</h3>
+        <p class="text-gray-700 leading-relaxed mb-4">
+            El Instituto Tlaxomulco es una institución educativa con más de XX años de experiencia, comprometida con
+            la formación académica y emocional de niños y jóvenes.
+        </p>
+        <p class="text-gray-700 leading-relaxed mb-10">
+            Desde el nivel preescolar hasta la preparatoria, ofrecemos una educación de calidad con atención
+            personalizada, actividades culturales y deportivas, así como programas innovadores que preparan a los
+            alumnos para los retos del mañana.
+        </p>
+
+        <!-- GALERÍA integrada -->
+        <h4 class="text-xl font-semibold text-indigo-800 mb-6 text-center">Galería del Instituto</h4>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+            <div class="overflow-hidden rounded-xl shadow-lg">
+                <img src="img/mikuicon.jpg" alt="Foto 1"
+                    class="w-full h-60 object-cover hover:scale-105 transition-transform duration-300">
+            </div>
+            <div class="overflow-hidden rounded-xl shadow-lg">
+                <img src="/ruta/a/tu/imagen2.jpg" alt="Foto 2"
+                    class="w-full h-60 object-cover hover:scale-105 transition-transform duration-300">
+            </div>
+            <div class="overflow-hidden rounded-xl shadow-lg">
+                <img src="/ruta/a/tu/imagen3.jpg" alt="Foto 3"
+                    class="w-full h-60 object-cover hover:scale-105 transition-transform duration-300">
+            </div>
+            <!-- Puedes duplicar más bloques como estos para agregar más fotos -->
+        </div>
+    </div>
+</section>
+
+<!-- MÉTODO EDUCATIVO -->
+<section class="py-16 bg-indigo-50">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-col md:flex-row items-center gap-12">
+            <div class="md:w-1/2" data-aos="fade-right">
+                <img src="/assets/metodo-educativo.jpg" alt="Método Educativo Tlaxomulco"
+                    class="w-full rounded-xl shadow-lg hover:scale-[1.02] transition duration-300">
+            </div>
+            <div class="md:w-1/2" data-aos="fade-left">
+                <div class="flex items-center gap-2 mb-4">
+                    <div class="h-1 w-8 bg-indigo-600"></div>
+                    <span class="text-sm font-semibold text-indigo-600">MÉTODO COMPROBADO</span>
+                </div>
+                <h3 class="text-3xl font-bold text-indigo-800 mb-6">Método Educativo Tlaxomulco 50+</h3>
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    Nuestro modelo pedagógico se fundamenta en el humanismo constructivista y el aprendizaje por
+                    competencias,
+                    enfocado en el desarrollo integral del alumno. A lo largo de más de 50 años, hemos perfeccionado un
+                    enfoque que considera:
+                </p>
+                <ul class="space-y-4 mb-8">
+                    <li class="flex items-start gap-3">
+                        <div class="text-indigo-600 mt-1"><i class="fas fa-brain"></i></div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Desarrollo cognitivo</h4>
+                            <p class="text-gray-600 text-sm">Aprendizaje activo donde los estudiantes construyen
+                                conocimiento a partir de experiencias significativas.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <div class="text-indigo-600 mt-1"><i class="fas fa-heart"></i></div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Inteligencia emocional</h4>
+                            <p class="text-gray-600 text-sm">Programas de educación emocional que fomentan
+                                autoconocimiento y relaciones saludables.</p>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <div class="text-indigo-600 mt-1"><i class="fas fa-chart-line"></i></div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Acompañamiento integral</h4>
+                            <p class="text-gray-600 text-sm">Seguimiento personalizado en lo académico y socioemocional
+                                para potenciar el desarrollo de cada estudiante.</p>
+                        </div>
+                    </li>
+                </ul>
+                <a href="#contacto"
+                    class="inline-flex items-center text-indigo-600 font-semibold hover:text-indigo-800">
+                    Conoce más sobre nuestro método
                     <i class="fas fa-arrow-right ml-2"></i>
                 </a>
-                <a href="#niveles" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-indigo-800 transition duration-300">
-                    Conoce nuestros niveles
-                </a>
-            </div>
-            
-            <!-- Elemento decorativo inferior (sin blur) -->
-            <div class="absolute bottom-0 left-0 right-0 h-16 bg-white/10"></div>
-        </div>
-        
-        <!-- Flecha indicadora -->
-        <a href="#nosotros" class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white animate-bounce">
-            <i class="fas fa-chevron-down text-2xl"></i>
-        </a>
-    </section>
-
-    <!-- NOSOTROS -->
-    <section id="nosotros" class="py-16 bg-white" data-aos="fade-up">
-        <div class="container mx-auto px-4">
-            <h3 class="text-2xl font-bold text-indigo-800 mb-6">¿Quiénes somos?</h3>
-            <p class="text-gray-700 leading-relaxed mb-4">
-                El Instituto Tlaxomulco es una institución educativa con más de XX años de experiencia, comprometida con
-                la formación académica y emocional de niños y jóvenes.
-            </p>
-            <p class="text-gray-700 leading-relaxed mb-10">
-                Desde el nivel preescolar hasta la preparatoria, ofrecemos una educación de calidad con atención
-                personalizada, actividades culturales y deportivas, así como programas innovadores que preparan a los
-                alumnos para los retos del mañana.
-            </p>
-
-            <!-- GALERÍA integrada -->
-            <h4 class="text-xl font-semibold text-indigo-800 mb-6 text-center">Galería del Instituto</h4>
-            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-                <div class="overflow-hidden rounded-xl shadow-lg">
-                    <img src="img/mikuicon.jpg" alt="Foto 1"
-                        class="w-full h-60 object-cover hover:scale-105 transition-transform duration-300">
-                </div>
-                <div class="overflow-hidden rounded-xl shadow-lg">
-                    <img src="/ruta/a/tu/imagen2.jpg" alt="Foto 2"
-                        class="w-full h-60 object-cover hover:scale-105 transition-transform duration-300">
-                </div>
-                <div class="overflow-hidden rounded-xl shadow-lg">
-                    <img src="/ruta/a/tu/imagen3.jpg" alt="Foto 3"
-                        class="w-full h-60 object-cover hover:scale-105 transition-transform duration-300">
-                </div>
-                <!-- Puedes duplicar más bloques como estos para agregar más fotos -->
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- MÉTODO EDUCATIVO -->
-    <section class="py-16 bg-indigo-50">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col md:flex-row items-center gap-12">
-                <div class="md:w-1/2" data-aos="fade-right">
-                    <img src="/assets/metodo-educativo.jpg" alt="Método Educativo Tlaxomulco" 
-                        class="w-full rounded-xl shadow-lg hover:scale-[1.02] transition duration-300">
+<!-- NIVELES EDUCATIVOS MEJORADOS -->
+<section id="niveles" class="py-20 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16" data-aos="fade-up">
+            <span
+                class="inline-block px-3 py-1 text-sm font-semibold text-indigo-600 bg-indigo-100 rounded-full mb-4">Nuestra
+                Oferta Educativa</span>
+            <h3 class="text-3xl md:text-4xl font-bold text-indigo-800 mb-4">Niveles Educativos</h3>
+            <p class="text-lg text-gray-600 max-w-2xl mx-auto">Una trayectoria formativa completa diseñada para cada
+                etapa del desarrollo</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <!-- Kinder -->
+            <div class="level-card bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300"
+                data-aos="fade-up" data-aos-delay="100">
+                <div class="h-48 overflow-hidden">
+                    <img src="/assets/kinder.jpg" alt="Niños en preescolar"
+                        class="w-full h-full object-cover transition duration-500 hover:scale-105">
                 </div>
-                <div class="md:w-1/2" data-aos="fade-left">
-                    <div class="flex items-center gap-2 mb-4">
-                        <div class="h-1 w-8 bg-indigo-600"></div>
-                        <span class="text-sm font-semibold text-indigo-600">MÉTODO COMPROBADO</span>
+                <div class="p-6">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="bg-indigo-100 text-indigo-600 p-2 rounded-full">
+                            <i class="fas fa-child text-lg"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-800">Preescolar</h4>
                     </div>
-                    <h3 class="text-3xl font-bold text-indigo-800 mb-6">Método Educativo Tlaxomulco 50+</h3>
-                    <p class="text-gray-700 leading-relaxed mb-6">
-                        Nuestro modelo pedagógico se fundamenta en el humanismo constructivista y el aprendizaje por competencias, 
-                        enfocado en el desarrollo integral del alumno. A lo largo de más de 50 años, hemos perfeccionado un 
-                        enfoque que considera:
-                    </p>
-                    <ul class="space-y-4 mb-8">
-                        <li class="flex items-start gap-3">
-                            <div class="text-indigo-600 mt-1"><i class="fas fa-brain"></i></div>
-                            <div>
-                                <h4 class="font-semibold text-gray-800">Desarrollo cognitivo</h4>
-                                <p class="text-gray-600 text-sm">Aprendizaje activo donde los estudiantes construyen conocimiento a partir de experiencias significativas.</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <div class="text-indigo-600 mt-1"><i class="fas fa-heart"></i></div>
-                            <div>
-                                <h4 class="font-semibold text-gray-800">Inteligencia emocional</h4>
-                                <p class="text-gray-600 text-sm">Programas de educación emocional que fomentan autoconocimiento y relaciones saludables.</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start gap-3">
-                            <div class="text-indigo-600 mt-1"><i class="fas fa-chart-line"></i></div>
-                            <div>
-                                <h4 class="font-semibold text-gray-800">Acompañamiento integral</h4>
-                                <p class="text-gray-600 text-sm">Seguimiento personalizado en lo académico y socioemocional para potenciar el desarrollo de cada estudiante.</p>
-                            </div>
-                        </li>
+                    <p class="text-gray-600 mb-4">Estimulación temprana a través del juego y actividades lúdicas que
+                        fomentan la creatividad y desarrollo socioemocional.</p>
+                    <ul class="space-y-2 text-sm text-gray-600 mb-4">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-indigo-500 text-xs"></i> Edades:
+                            3 a 5 años</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-indigo-500 text-xs"></i>
+                            Horario: 8:00 - 13:00 hrs</li>
                     </ul>
-                    <a href="#contacto" class="inline-flex items-center text-indigo-600 font-semibold hover:text-indigo-800">
-                        Conoce más sobre nuestro método
-                        <i class="fas fa-arrow-right ml-2"></i>
+                    <a href="#contacto"
+                        class="text-indigo-600 font-medium hover:text-indigo-800 inline-flex items-center text-sm">
+                        Más información <i class="fas fa-chevron-right ml-1 text-xs"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Primaria -->
+            <div class="level-card bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300"
+                data-aos="fade-up" data-aos-delay="200">
+                <div class="h-48 overflow-hidden">
+                    <img src="/assets/primaria.jpg" alt="Niños en primaria"
+                        class="w-full h-full object-cover transition duration-500 hover:scale-105">
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="bg-indigo-100 text-indigo-600 p-2 rounded-full">
+                            <i class="fas fa-book text-lg"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-800">Primaria</h4>
+                    </div>
+                    <p class="text-gray-600 mb-4">Formación integral con enfoque en competencias básicas, valores y
+                        desarrollo de habilidades sociales.</p>
+                    <ul class="space-y-2 text-sm text-gray-600 mb-4">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-indigo-500 text-xs"></i> Grados:
+                            1° a 6°</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-indigo-500 text-xs"></i>
+                            Horario: 7:30 - 14:30 hrs</li>
+                    </ul>
+                    <a href="#contacto"
+                        class="text-indigo-600 font-medium hover:text-indigo-800 inline-flex items-center text-sm">
+                        Más información <i class="fas fa-chevron-right ml-1 text-xs"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Secundaria -->
+            <div class="level-card bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300"
+                data-aos="fade-up" data-aos-delay="300">
+                <div class="h-48 overflow-hidden">
+                    <img src="/assets/secundaria.jpg" alt="Adolescentes en secundaria"
+                        class="w-full h-full object-cover transition duration-500 hover:scale-105">
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="bg-indigo-100 text-indigo-600 p-2 rounded-full">
+                            <i class="fas fa-atom text-lg"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-800">Secundaria</h4>
+                    </div>
+                    <p class="text-gray-600 mb-4">Desarrollo de pensamiento crítico y científico con programas de
+                        orientación vocacional temprana.</p>
+                    <ul class="space-y-2 text-sm text-gray-600 mb-4">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-indigo-500 text-xs"></i> Grados:
+                            1° a 3°</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-indigo-500 text-xs"></i>
+                            Horario: 7:00 - 15:00 hrs</li>
+                    </ul>
+                    <a href="#contacto"
+                        class="text-indigo-600 font-medium hover:text-indigo-800 inline-flex items-center text-sm">
+                        Más información <i class="fas fa-chevron-right ml-1 text-xs"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Preparatoria -->
+            <div class="level-card bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300"
+                data-aos="fade-up" data-aos-delay="400">
+                <div class="h-48 overflow-hidden">
+                    <img src="/assets/preparatoria.jpg" alt="Jóvenes en preparatoria"
+                        class="w-full h-full object-cover transition duration-500 hover:scale-105">
+                </div>
+                <div class="p-6">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="bg-indigo-100 text-indigo-600 p-2 rounded-full">
+                            <i class="fas fa-graduation-cap text-lg"></i>
+                        </div>
+                        <h4 class="text-xl font-bold text-gray-800">Preparatoria</h4>
+                    </div>
+                    <p class="text-gray-600 mb-4">Programa bachillerato general con orientación profesional y
+                        preparación para educación superior.</p>
+                    <ul class="space-y-2 text-sm text-gray-600 mb-4">
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-indigo-500 text-xs"></i> Grados:
+                            1° a 3°</li>
+                        <li class="flex items-center gap-2"><i class="fas fa-check text-indigo-500 text-xs"></i>
+                            Horario: 7:00 - 15:30 hrs</li>
+                    </ul>
+                    <a href="#contacto"
+                        class="text-indigo-600 font-medium hover:text-indigo-800 inline-flex items-center text-sm">
+                        Más información <i class="fas fa-chevron-right ml-1 text-xs"></i>
                     </a>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- NIVELES EDUCATIVOS MEJORADOS -->
-    <section id="niveles" class="py-20 bg-white">
-        <div class="container mx-auto px-4">
-            <div class="text-center mb-16" data-aos="fade-up">
-                <span class="inline-block px-3 py-1 text-sm font-semibold text-indigo-600 bg-indigo-100 rounded-full mb-4">Nuestra Oferta Educativa</span>
-                <h3 class="text-3xl md:text-4xl font-bold text-indigo-800 mb-4">Niveles Educativos</h3>
-                <p class="text-lg text-gray-600 max-w-2xl mx-auto">Una trayectoria formativa completa diseñada para cada etapa del desarrollo</p>
-            </div>
+<!-- CONTACTO MEJORADO -->
+<section id="contacto" class="py-10 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-col lg:flex-row gap-12">
+            <!-- Información de contacto -->
+            <div class="lg:w-1/2" data-aos="fade-right">
+                <div class="max-w-lg">
+                    <span
+                        class="inline-block px-3 py-1 text-sm font-semibold text-indigo-600 bg-indigo-100 rounded-full mb-4">Estamos
+                        aquí para ayudarte</span>
+                    <h3 class="text-3xl font-bold text-indigo-800 mb-6">Contáctanos</h3>
+                    <p class="text-lg text-gray-600 mb-8">¿Tienes preguntas sobre nuestros programas educativos?
+                        Completa el formulario o utiliza nuestros otros canales de contacto.</p>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Kinder -->
-                <div class="level-card bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300" data-aos="fade-up" data-aos-delay="100">
-                    <div class="h-48 overflow-hidden">
-                        <img src="/assets/kinder.jpg" alt="Niños en preescolar" class="w-full h-full object-cover transition duration-500 hover:scale-105">
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-center gap-3 mb-3">
-                            <div class="bg-indigo-100 text-indigo-600 p-2 rounded-full">
-                                <i class="fas fa-child text-lg"></i>
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="mt-1 text-indigo-600">
+                                <i class="fas fa-map-marker-alt text-xl"></i>
                             </div>
-                            <h4 class="text-xl font-bold text-gray-800">Preescolar</h4>
-                        </div>
-                        <p class="text-gray-600 mb-4">Estimulación temprana a través del juego y actividades lúdicas que fomentan la creatividad y desarrollo socioemocional.</p>
-                        <ul class="space-y-2 text-sm text-gray-600 mb-4">
-                            <li class="flex items-center gap-2"><i class="fas fa-check text-indigo-500 text-xs"></i> Edades: 3 a 5 años</li>
-                            <li class="flex items-center gap-2"><i class="fas fa-check text-indigo-500 text-xs"></i> Horario: 8:00 - 13:00 hrs</li>
-                        </ul>
-                        <a href="#contacto" class="text-indigo-600 font-medium hover:text-indigo-800 inline-flex items-center text-sm">
-                            Más información <i class="fas fa-chevron-right ml-1 text-xs"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Primaria -->
-                <div class="level-card bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300" data-aos="fade-up" data-aos-delay="200">
-                    <div class="h-48 overflow-hidden">
-                        <img src="/assets/primaria.jpg" alt="Niños en primaria" class="w-full h-full object-cover transition duration-500 hover:scale-105">
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-center gap-3 mb-3">
-                            <div class="bg-indigo-100 text-indigo-600 p-2 rounded-full">
-                                <i class="fas fa-book text-lg"></i>
-                            </div>
-                            <h4 class="text-xl font-bold text-gray-800">Primaria</h4>
-                        </div>
-                        <p class="text-gray-600 mb-4">Formación integral con enfoque en competencias básicas, valores y desarrollo de habilidades sociales.</p>
-                        <ul class="space-y-2 text-sm text-gray-600 mb-4">
-                            <li class="flex items-center gap-2"><i class="fas fa-check text-indigo-500 text-xs"></i> Grados: 1° a 6°</li>
-                            <li class="flex items-center gap-2"><i class="fas fa-check text-indigo-500 text-xs"></i> Horario: 7:30 - 14:30 hrs</li>
-                        </ul>
-                        <a href="#contacto" class="text-indigo-600 font-medium hover:text-indigo-800 inline-flex items-center text-sm">
-                            Más información <i class="fas fa-chevron-right ml-1 text-xs"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Secundaria -->
-                <div class="level-card bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300" data-aos="fade-up" data-aos-delay="300">
-                    <div class="h-48 overflow-hidden">
-                        <img src="/assets/secundaria.jpg" alt="Adolescentes en secundaria" class="w-full h-full object-cover transition duration-500 hover:scale-105">
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-center gap-3 mb-3">
-                            <div class="bg-indigo-100 text-indigo-600 p-2 rounded-full">
-                                <i class="fas fa-atom text-lg"></i>
-                            </div>
-                            <h4 class="text-xl font-bold text-gray-800">Secundaria</h4>
-                        </div>
-                        <p class="text-gray-600 mb-4">Desarrollo de pensamiento crítico y científico con programas de orientación vocacional temprana.</p>
-                        <ul class="space-y-2 text-sm text-gray-600 mb-4">
-                            <li class="flex items-center gap-2"><i class="fas fa-check text-indigo-500 text-xs"></i> Grados: 1° a 3°</li>
-                            <li class="flex items-center gap-2"><i class="fas fa-check text-indigo-500 text-xs"></i> Horario: 7:00 - 15:00 hrs</li>
-                        </ul>
-                        <a href="#contacto" class="text-indigo-600 font-medium hover:text-indigo-800 inline-flex items-center text-sm">
-                            Más información <i class="fas fa-chevron-right ml-1 text-xs"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Preparatoria -->
-                <div class="level-card bg-white border border-gray-200 rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all duration-300" data-aos="fade-up" data-aos-delay="400">
-                    <div class="h-48 overflow-hidden">
-                        <img src="/assets/preparatoria.jpg" alt="Jóvenes en preparatoria" class="w-full h-full object-cover transition duration-500 hover:scale-105">
-                    </div>
-                    <div class="p-6">
-                        <div class="flex items-center gap-3 mb-3">
-                            <div class="bg-indigo-100 text-indigo-600 p-2 rounded-full">
-                                <i class="fas fa-graduation-cap text-lg"></i>
-                            </div>
-                            <h4 class="text-xl font-bold text-gray-800">Preparatoria</h4>
-                        </div>
-                        <p class="text-gray-600 mb-4">Programa bachillerato general con orientación profesional y preparación para educación superior.</p>
-                        <ul class="space-y-2 text-sm text-gray-600 mb-4">
-                            <li class="flex items-center gap-2"><i class="fas fa-check text-indigo-500 text-xs"></i> Grados: 1° a 3°</li>
-                            <li class="flex items-center gap-2"><i class="fas fa-check text-indigo-500 text-xs"></i> Horario: 7:00 - 15:30 hrs</li>
-                        </ul>
-                        <a href="#contacto" class="text-indigo-600 font-medium hover:text-indigo-800 inline-flex items-center text-sm">
-                            Más información <i class="fas fa-chevron-right ml-1 text-xs"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CONTACTO MEJORADO -->
-    <section id="contacto" class="py-10 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <div class="flex flex-col lg:flex-row gap-12">
-                <!-- Información de contacto -->
-                <div class="lg:w-1/2" data-aos="fade-right">
-                    <div class="max-w-lg">
-                        <span class="inline-block px-3 py-1 text-sm font-semibold text-indigo-600 bg-indigo-100 rounded-full mb-4">Estamos aquí para ayudarte</span>
-                        <h3 class="text-3xl font-bold text-indigo-800 mb-6">Contáctanos</h3>
-                        <p class="text-lg text-gray-600 mb-8">¿Tienes preguntas sobre nuestros programas educativos? Completa el formulario o utiliza nuestros otros canales de contacto.</p>
-                        
-                        <div class="space-y-6">
-                            <div class="flex items-start gap-4">
-                                <div class="mt-1 text-indigo-600">
-                                    <i class="fas fa-map-marker-alt text-xl"></i>
-                                </div>
-                                <div>
-                                    <h4 class="text-lg font-semibold text-gray-800">Dirección</h4>
-                                    <p class="text-gray-600">Hombres Ilustres 25, Señor de los Milagros, 54884 Melchor Ocampo, Méx.</p>
-                                </div>
-                            </div>
-                            
-                            <div class="flex items-start gap-4">
-                                <div class="mt-1 text-indigo-600">
-                                    <i class="fas fa-phone-alt text-xl"></i>
-                                </div>
-                                <div>
-                                    <h4 class="text-lg font-semibold text-gray-800">Teléfono</h4>
-                                    <p class="text-gray-600">+52 246 123 4567</p>
-                                    <p class="text-sm text-gray-500">Lunes a Viernes de 8:00 a 18:00 hrs</p>
-                                </div>
-                            </div>
-                            
-                            <div class="flex items-start gap-4">
-                                <div class="mt-1 text-indigo-600">
-                                    <i class="fas fa-envelope text-xl"></i>
-                                </div>
-                                <div>
-                                    <h4 class="text-lg font-semibold text-gray-800">Correo electrónico</h4>
-                                    <p class="text-gray-600">contacto@institutotlaxomulco.edu.mx</p>
-                                </div>
-                            </div>
-                            
-                            <div class="flex items-start gap-4">
-                                <div class="mt-1 text-indigo-600">
-                                    <i class="fas fa-clock text-xl"></i>
-                                </div>
-                                <div>
-                                    <h4 class="text-lg font-semibold text-gray-800">Horario de atención</h4>
-                                    <p class="text-gray-600">Lunes a Viernes: 7:30 am - 6:00 pm</p>
-                                    <p class="text-gray-600">Sábados: 9:00 am - 1:00 pm</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Formulario -->
-                <div class="lg:w-1/2" data-aos="fade-left">
-                    <div class="bg-white p-8 rounded-xl shadow-md">
-                        <h4 class="text-2xl font-semibold text-indigo-800 mb-6">Envía un mensaje</h4>
-                        
-                        <form action="https://formsubmit.co/dantealejandro35@gmail.com" method="POST" class="space-y-5">
-                            <input type="hidden" name="_subject" value="Nuevo mensaje desde el sitio web">
-                            <input type="hidden" name="_template" value="table">
-                            
                             <div>
-                                <label for="nombre" class="block text-sm font-medium text-gray-700 mb-1">Nombre completo*</label>
-                                <input type="text" id="nombre" name="nombre" required
+                                <h4 class="text-lg font-semibold text-gray-800">Dirección</h4>
+                                <p class="text-gray-600">Hombres Ilustres 25, Señor de los Milagros, 54884 Melchor
+                                    Ocampo, Méx.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="mt-1 text-indigo-600">
+                                <i class="fas fa-phone-alt text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-800">Teléfono</h4>
+                                <p class="text-gray-600">+52 246 123 4567</p>
+                                <p class="text-sm text-gray-500">Lunes a Viernes de 8:00 a 18:00 hrs</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="mt-1 text-indigo-600">
+                                <i class="fas fa-envelope text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-800">Correo electrónico</h4>
+                                <p class="text-gray-600">contacto@institutotlaxomulco.edu.mx</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="mt-1 text-indigo-600">
+                                <i class="fas fa-clock text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-800">Horario de atención</h4>
+                                <p class="text-gray-600">Lunes a Viernes: 7:30 am - 6:00 pm</p>
+                                <p class="text-gray-600">Sábados: 9:00 am - 1:00 pm</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Formulario -->
+            <div class="lg:w-1/2" data-aos="fade-left">
+                <div class="bg-white p-8 rounded-xl shadow-md">
+                    <h4 class="text-2xl font-semibold text-indigo-800 mb-6">Envía un mensaje</h4>
+
+                    <form action="https://formsubmit.co/dantealejandro35@gmail.com" method="POST" class="space-y-5">
+                        <input type="hidden" name="_subject" value="Nuevo mensaje desde el sitio web">
+                        <input type="hidden" name="_template" value="table">
+
+                        <div>
+                            <label for="nombre" class="block text-sm font-medium text-gray-700 mb-1">Nombre
+                                completo*</label>
+                            <input type="text" id="nombre" name="nombre" required
+                                class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-transparent"
+                                placeholder="Ingresa tu nombre completo">
+                        </div>
+
+                        <div class="grid md:grid-cols-2 gap-5">
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Correo
+                                    electrónico*</label>
+                                <input type="email" id="email" name="email" required
                                     class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-transparent"
-                                    placeholder="Ingresa tu nombre completo">
+                                    placeholder="tu@email.com">
                             </div>
-                            
-                            <div class="grid md:grid-cols-2 gap-5">
-                                <div>
-                                    <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Correo electrónico*</label>
-                                    <input type="email" id="email" name="email" required
-                                        class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-transparent"
-                                        placeholder="tu@email.com">
-                                </div>
-                                
-                                <div>
-                                    <label for="telefono" class="block text-sm font-medium text-gray-700 mb-1">Teléfono</label>
-                                    <input type="tel" id="telefono" name="telefono"
-                                        class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-transparent"
-                                        placeholder="+52 ___ ___ ____">
-                                </div>
-                            </div>
-                            
+
                             <div>
-                                <label for="nivel" class="block text-sm font-medium text-gray-700 mb-1">Nivel de interés</label>
-                                <select id="nivel" name="nivel_interes"
-                                    class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-transparent">
-                                    <option value="">Selecciona una opción</option>
-                                    <option value="preescolar">Preescolar</option>
-                                    <option value="primaria">Primaria</option>
-                                    <option value="secundaria">Secundaria</option>
-                                    <option value="preparatoria">Preparatoria</option>
-                                </select>
-                            </div>
-                            
-                            <div>
-                                <label for="mensaje" class="block text-sm font-medium text-gray-700 mb-1">Mensaje*</label>
-                                <textarea id="mensaje" name="mensaje" rows="4" required
+                                <label for="telefono"
+                                    class="block text-sm font-medium text-gray-700 mb-1">Teléfono</label>
+                                <input type="tel" id="telefono" name="telefono"
                                     class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-transparent"
-                                    placeholder="Escribe tu mensaje aquí..."></textarea>
+                                    placeholder="+52 ___ ___ ____">
                             </div>
-                            
-                            <div>
-                                <button type="submit"
-                                    class="w-full bg-indigo-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-indigo-700 transition duration-300 shadow hover:shadow-md">
-                                    <i class="fas fa-paper-plane mr-2"></i> Enviar mensaje
-                                </button>
-                            </div>
-                        </form>
-                    </div>
+                        </div>
+
+                        <div>
+                            <label for="nivel" class="block text-sm font-medium text-gray-700 mb-1">Nivel de
+                                interés</label>
+                            <select id="nivel" name="nivel_interes"
+                                class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-transparent">
+                                <option value="">Selecciona una opción</option>
+                                <option value="preescolar">Preescolar</option>
+                                <option value="primaria">Primaria</option>
+                                <option value="secundaria">Secundaria</option>
+                                <option value="preparatoria">Preparatoria</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="mensaje" class="block text-sm font-medium text-gray-700 mb-1">Mensaje*</label>
+                            <textarea id="mensaje" name="mensaje" rows="4" required
+                                class="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:border-transparent"
+                                placeholder="Escribe tu mensaje aquí..."></textarea>
+                        </div>
+
+                        <div>
+                            <button type="submit"
+                                class="w-full bg-indigo-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-indigo-700 transition duration-300 shadow hover:shadow-md">
+                                <i class="fas fa-paper-plane mr-2"></i> Enviar mensaje
+                            </button>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- MAPA -->
-    <section class="py-6 bg-gray-50">
-        <div class="container mx-auto px-4">
-            <h3 class="text-2xl font-bold text-indigo-800 mb-6 text-center">¿Dónde estamos?</h3>
-            <div class="rounded-xl overflow-hidden shadow-lg">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3756.179583803073!2d-99.15018622415928!3d19.70497703192462!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f5286f76bc4b%3A0x9376414b20df7f3f!2sInstituto%20Tlaxomulco!5e0!3m2!1ses-419!2smx!4v1744220236061!5m2!1ses-419!2smx"
-                    width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
-                    referrerpolicy="no-referrer-when-downgrade" class="w-full h-[400px] border-none">
-                </iframe>
+<!-- MAPA -->
+<section class="py-6 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <h3 class="text-2xl font-bold text-indigo-800 mb-6 text-center">¿Dónde estamos?</h3>
+        <div class="rounded-xl overflow-hidden shadow-lg">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3756.179583803073!2d-99.15018622415928!3d19.70497703192462!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f5286f76bc4b%3A0x9376414b20df7f3f!2sInstituto%20Tlaxomulco!5e0!3m2!1ses-419!2smx!4v1744220236061!5m2!1ses-419!2smx"
+                width="100%" height="400" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade" class="w-full h-[400px] border-none">
+            </iframe>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section class="py-6 bg-white">
+    <div class="container mx-auto px-4">
+        <h3 class="text-2xl font-bold text-indigo-800 mb-10 text-center">Preguntas Frecuentes</h3>
+        <div class="space-y-6 max-w-3xl mx-auto">
+            <div class="border border-gray-200 rounded-xl p-4 shadow-sm">
+                <h4 class="text-lg font-semibold text-indigo-700 mb-2">¿Qué niveles educativos ofrece el Instituto?
+                </h4>
+                <p class="text-gray-600 text-sm">Ofrecemos educación desde Preescolar hasta Preparatoria, con
+                    programas integrales en cada etapa.</p>
+            </div>
+            <div class="border border-gray-200 rounded-xl p-4 shadow-sm">
+                <h4 class="text-lg font-semibold text-indigo-700 mb-2">¿Hay actividades extracurriculares?</h4>
+                <p class="text-gray-600 text-sm">Sí, contamos con talleres de música, deportes, arte, robótica y
+                    más, dependiendo del nivel educativo.</p>
+            </div>
+            <div class="border border-gray-200 rounded-xl p-4 shadow-sm">
+                <h4 class="text-lg font-semibold text-indigo-700 mb-2">¿Dónde puedo inscribir a mi hijo(a)?</h4>
+                <p class="text-gray-600 text-sm">Puedes contactarnos desde el formulario o directamente en nuestras
+                    instalaciones. Siempre hay alguien para orientarte.</p>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- FAQ -->
-    <section class="py-6 bg-white">
-        <div class="container mx-auto px-4">
-            <h3 class="text-2xl font-bold text-indigo-800 mb-10 text-center">Preguntas Frecuentes</h3>
-            <div class="space-y-6 max-w-3xl mx-auto">
-                <div class="border border-gray-200 rounded-xl p-4 shadow-sm">
-                    <h4 class="text-lg font-semibold text-indigo-700 mb-2">¿Qué niveles educativos ofrece el Instituto?
-                    </h4>
-                    <p class="text-gray-600 text-sm">Ofrecemos educación desde Preescolar hasta Preparatoria, con
-                        programas integrales en cada etapa.</p>
-                </div>
-                <div class="border border-gray-200 rounded-xl p-4 shadow-sm">
-                    <h4 class="text-lg font-semibold text-indigo-700 mb-2">¿Hay actividades extracurriculares?</h4>
-                    <p class="text-gray-600 text-sm">Sí, contamos con talleres de música, deportes, arte, robótica y
-                        más, dependiendo del nivel educativo.</p>
-                </div>
-                <div class="border border-gray-200 rounded-xl p-4 shadow-sm">
-                    <h4 class="text-lg font-semibold text-indigo-700 mb-2">¿Dónde puedo inscribir a mi hijo(a)?</h4>
-                    <p class="text-gray-600 text-sm">Puedes contactarnos desde el formulario o directamente en nuestras
-                        instalaciones. Siempre hay alguien para orientarte.</p>
-                </div>
-            </div>
+<a href="https://wa.me/525573512993" target="_blank"
+    class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition">
+    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><!-- Icono de WhatsApp --></svg>
+</a>
+
+<footer class="bg-indigo-600 text-white py-6 mt-10">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-sm">
+        <p>&copy; 2025 Instituto Tlaxomulco. Todos los derechos reservados.</p>
+        <div class="flex gap-4 mt-2 md:mt-0">
+            <a href="#" class="hover:text-gray-200">Aviso de privacidad</a>
+            <a href="#" class="hover:text-gray-200">Política de cookies</a>
         </div>
-    </section>
+    </div>
+</footer>
 
-    <a href="https://wa.me/525573512993" target="_blank"
-        class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition">
-        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><!-- Icono de WhatsApp --></svg>
-    </a>
-
-    <footer class="bg-indigo-600 text-white py-6 mt-10">
-        <div class="container mx-auto px-4 flex flex-col md:flex-row justify-between items-center text-sm">
-            <p>&copy; 2025 Instituto Tlaxomulco. Todos los derechos reservados.</p>
-            <div class="flex gap-4 mt-2 md:mt-0">
-                <a href="#" class="hover:text-gray-200">Aviso de privacidad</a>
-                <a href="#" class="hover:text-gray-200">Política de cookies</a>
-            </div>
-        </div>
-    </footer>
-
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>AOS.init();</script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>AOS.init();</script>
 
 </body>
 
